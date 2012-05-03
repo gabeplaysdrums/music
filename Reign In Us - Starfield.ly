@@ -1,6 +1,7 @@
 \version "2.14.2"
 
 \include "english.ly"
+\include "common.ly"
 
 \header {
   title = \markup { "Reign In Us - Starfield" }
@@ -27,7 +28,7 @@ myVerseOnePattern = \drummode {
 myChorusPattern = \drummode {
   <<
     {
-      cymr8 cymr <cymr sn> cymr cymr cymr <cymr sn> cymr
+      \myDrumVoiceRideEigthsSnareTwoAndFour
     } \\ {
       bd4 r4 bd8 bd8 r4
     }
@@ -41,14 +42,14 @@ myChorusPattern = \drummode {
   >>
   <<
     {
-      cymr8 cymr <cymr sn> cymr cymr cymr <cymr sn> cymr
+      \myDrumVoiceRideEigthsSnareTwoAndFour
     } \\ {
       r8 bd8 r8. bd16 r8 bd8 r4
     }
   >>
   <<
     {
-      cymr8 cymr <cymr sn> cymr cymr cymr <cymr sn> cymr
+      \myDrumVoiceRideEigthsSnareTwoAndFour
     } \\ {
       bd8 <\parenthesize bd>8 r4 bd8 bd r4
     }
@@ -63,7 +64,7 @@ myChorusMovement = {
 myVerseTwoPattern = \drummode {
   <<
     {
-      hh8 hh <hh sn> hh hh hh <hh sn> hh
+      \myDrumVoiceHiHatEigthsSnareTwoAndFour
     } \\ {
       bd4 r4 bd8 bd8 r4
     }
@@ -98,7 +99,7 @@ myVerseTwoPattern = \drummode {
           >>
           <<
             {
-              hho8 hho <hho sn> hho hho hho <hho sn> hho
+              \myDrumVoiceHiHatOpenEigthsSnareTwoAndFour
             } \\ {
               bd8 bd r4 bd8 bd r4
             }
@@ -121,7 +122,7 @@ myVerseTwoPattern = \drummode {
         \repeat percent 2
         <<
           {
-            cymr8 cymr <cymr sn> cymr cymr cymr <cymr sn> cymr
+            \myDrumVoiceRideEigthsSnareTwoAndFour
           } \\ {
             bd4 r4 bd8 bd8 r4
           }
