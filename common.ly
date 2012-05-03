@@ -1,3 +1,15 @@
+\version "2.14.2"
+
+\include "english.ly"
+
+\paper {
+  paper-height = 8.5\in
+  paper-width = 11\in
+  indent = #0
+}
+
+% Commonly used voices
+
 myDrumVoiceHiHatEigthsSnareTwoAndFour = \drummode {
   hh8 hh <hh sn> hh hh hh <hh sn> hh
 }
@@ -8,4 +20,32 @@ myDrumVoiceRideEigthsSnareTwoAndFour = \drummode {
 
 myDrumVoiceHiHatOpenEigthsSnareTwoAndFour = \drummode {
   hho8 hho <hho sn> hho hho hho <hho sn> hho
+}
+
+% Fills
+
+pushSlash = {
+  \override NoteHead #'style = #'slash
+  \override Stem #'transparent = ##t
+}
+
+popSlash = {
+  \revert NoteHead #'style
+  \revert Stem #'transparent
+}
+
+myDrumVoiceFillOneCount = {
+  \pushSlash d4 \popSlash
+}
+
+myDrumVoiceFillTwoCounts = {
+  \pushSlash d4 d \popSlash
+}
+
+myDrumVoiceFillThreeCounts = {
+  \pushSlash d4 d d \popSlash
+}
+
+myDrumVoiceFillFourCounts = {
+  \pushSlash d4 d d d \popSlash
 }

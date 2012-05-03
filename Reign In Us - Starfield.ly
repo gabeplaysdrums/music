@@ -1,16 +1,7 @@
-\version "2.14.2"
-
-\include "english.ly"
 \include "common.ly"
 
 \header {
   title = \markup { "Reign In Us - Starfield" }
-}
-
-\paper {
-  paper-height = 8.5\in
-  paper-width = 11\in
-  indent = #0
 }
 
 myVerseOnePattern = \drummode {
@@ -105,6 +96,7 @@ myVerseTwoPattern = \drummode {
             }
           >>
         }
+        \break
         
         \mark "V1"
         \repeat volta 2
@@ -127,6 +119,7 @@ myVerseTwoPattern = \drummode {
             bd4 r4 bd8 bd8 r4
           }
         >>
+        \break
         
         \mark "V2"
         \repeat volta 2
@@ -141,6 +134,7 @@ myVerseTwoPattern = \drummode {
         \myChorusMovement
         
         \mark "Post2"
+        \myDrumVoiceFillFourCounts
         %TODO: start here
       }
     >>
