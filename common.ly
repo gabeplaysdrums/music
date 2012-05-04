@@ -6,6 +6,7 @@
   paper-height = 8.5\in
   paper-width = 11\in
   indent = #0
+  page-count = 1
 }
 
 % Commonly used voices
@@ -20,6 +21,10 @@ myDrumVoiceRideEigthsSnareTwoAndFour = \drummode {
 
 myDrumVoiceHiHatOpenEigthsSnareTwoAndFour = \drummode {
   hho8 hho <hho sn> hho hho hho <hho sn> hho
+}
+
+myDrumVoiceBassQuarters = \drummode {
+  bd4 bd bd bd
 }
 
 % Fills

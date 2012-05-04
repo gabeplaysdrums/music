@@ -96,7 +96,6 @@ myVerseTwoPattern = \drummode {
             }
           >>
         }
-        \break
         
         \mark "V1"
         \repeat volta 2
@@ -119,7 +118,6 @@ myVerseTwoPattern = \drummode {
             bd4 r4 bd8 bd8 r4
           }
         >>
-        \break
         
         \mark "V2"
         \repeat volta 2
@@ -135,7 +133,95 @@ myVerseTwoPattern = \drummode {
         
         \mark "Post2"
         \myDrumVoiceFillFourCounts
-        %TODO: start here
+        
+        \mark "Bridge1"
+        \repeat volta 2
+        \repeat percent 2 {
+          <<
+            {
+              hho8 hho <hho sn> hho16 sn16 hho8 hho <hho sn> hho
+            } \\ {
+              bd8 bd r4 r16 bd16 bd8 r4
+            }
+          >>
+          <<
+            {
+              hho8 hho <hho sn> hho16 sn16 hho8 hho <hho sn> hho
+            } \\ {
+              bd8 bd r4 <\parenthesize bd>8 <\parenthesize bd>8 r4
+            }
+          >>
+        }
+        
+        \mark "C3"
+        R1
+        <<
+          {
+            r2. cymr8\p\< cymr16 sn16
+          } \\ {
+          }
+        >>
+        <<
+          {
+            cymr16 sn16 cymr8 <cymr sn> cymr cymr16 sn16 cymr8 <cymr sn> cymr
+          } \\ {
+            r8 bd r4 bd8 bd r4
+          }
+        >>
+        <<
+          {
+            cymr16 sn16 cymr8 <cymr sn> <cymr sn> \pushSlash sn4 sn\f\! \popSlash
+          } \\ {
+            bd8 bd r4
+          }
+        >>
+        \myChorusPattern
+        
+        \mark "C4"
+        \myChorusMovement
+
+        \mark "Bridge2"
+        R1*4
+        <<
+          {
+          } \\ {
+            bd4\pp\< bd bd bd
+          }
+        >>
+        \repeat unfold 3
+        <<
+          {
+          } \\ {
+            \myDrumVoiceBassQuarters
+          }
+        >>
+        
+        \repeat unfold 3
+        <<
+          {
+            \pushSlash sn4 sn sn sn \popSlash
+          } \\ {
+            \myDrumVoiceBassQuarters
+          }
+        >>
+        <<
+          {
+            \pushSlash sn4 sn sn sn \popSlash
+          } \\ {
+            bd4 bd bd bd\f\!
+          }
+        >>
+
+        \mark "Outro"
+        \repeat volta 2
+        \repeat percent 4
+        <<
+          {
+            \myDrumVoiceRideEigthsSnareTwoAndFour
+          } \\ {
+            bd8 bd r4 bd8 bd8 r4
+          }
+        >>
       }
     >>
   >>
