@@ -23,8 +23,20 @@ myDrumVoiceHiHatOpenEigthsSnareTwoAndFour = \drummode {
   hho8 hho <hho sn> hho hho hho <hho sn> hho
 }
 
+myDrumVoiceCrashEigthsSnareTwoAndFour = \drummode {
+  \repeat unfold 2 { cymc8 cymc <cymc sn> cymc }
+}
+
+myDrumVoiceCrashQuartersSnareTwoAndFour = \drummode {
+  cymc4 <cymc sn> cymc <cymc sn>
+}
+
 myDrumVoiceBassQuarters = \drummode {
-  bd4 bd bd bd
+  \repeat unfold 4 bd4
+}
+
+myDrumVoiceBassEigths = \drummode {
+  \repeat unfold 8 bd8
 }
 
 % Fills
@@ -39,18 +51,18 @@ popSlash = {
   \revert Stem #'transparent
 }
 
-myDrumVoiceFillOneCount = {
-  \pushSlash d4 \popSlash
+myDrumVoiceFillOneCount = \drummode {
+  \pushSlash sn4 \popSlash
 }
 
-myDrumVoiceFillTwoCounts = {
-  \pushSlash d4 d \popSlash
+myDrumVoiceFillTwoCounts = \drummode {
+  \pushSlash sn4 sn \popSlash
 }
 
-myDrumVoiceFillThreeCounts = {
-  \pushSlash d4 d d \popSlash
+myDrumVoiceFillThreeCounts = \drummode {
+  \pushSlash sn4 sn sn \popSlash
 }
 
-myDrumVoiceFillFourCounts = {
-  \pushSlash d4 d d d \popSlash
+myDrumVoiceFillFourCounts = \drummode {
+  \pushSlash sn4 sn sn sn \popSlash
 }
