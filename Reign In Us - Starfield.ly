@@ -70,6 +70,7 @@ myVerseTwoPattern = \drummode {
       \new DrumVoice = "2" { s1 }
       \drummode {
         \time 4/4
+        \tempo 4 = 72
         
         \mark "Intro"
         R1
@@ -106,6 +107,7 @@ myVerseTwoPattern = \drummode {
         \repeat percent 4
         \myVerseOnePattern
         
+        \break
         \mark "C1"
         \myChorusMovement
         
@@ -119,6 +121,7 @@ myVerseTwoPattern = \drummode {
           }
         >>
         
+        \break
         \mark "V2"
         \repeat volta 2
         \repeat percent 4
@@ -129,11 +132,14 @@ myVerseTwoPattern = \drummode {
         \myVerseTwoPattern
         
         \mark "C2"
-        \myChorusMovement
+        \repeat volta 2
+        \repeat unfold 4
+        \myDrumVoicePreviousPatternMeasure
         
         \mark "Post2"
         \myDrumVoiceFillFourCounts
         
+        \break
         \mark "Bridge1"
         \repeat volta 2
         \repeat percent 2 {
@@ -175,53 +181,48 @@ myVerseTwoPattern = \drummode {
             bd8 bd r4
           }
         >>
-        \myChorusPattern
+        \repeat unfold 4
+        \myDrumVoicePreviousPatternMeasure
         
         \mark "C4"
-        \myChorusMovement
+        \repeat volta 2 {
+          \repeat unfold 4
+          \myDrumVoicePreviousPatternMeasure
+        }
 
+        \break
         \mark "Bridge2"
         R1*4
+        \repeat percent 4
         <<
           {
           } \\ {
-            bd4\pp\< bd bd bd
-          }
-        >>
-        \repeat unfold 3
-        <<
-          {
-          } \\ {
-            \myDrumVoiceBassQuarters
+            bd4\pp bd_"Crescendo . . . " bd bd
           }
         >>
         
-        \repeat unfold 3
+        \repeat percent 4
         <<
           {
             \pushSlash sn4 sn sn sn \popSlash
           } \\ {
-            \myDrumVoiceBassQuarters
-          }
-        >>
-        <<
-          {
-            \pushSlash sn4 sn sn sn \popSlash
-          } \\ {
-            bd4 bd bd bd\f\!
+            bd4_"Crescendo . . ." bd bd bd
           }
         >>
 
         \mark "Outro"
+        \bar "S"
         \repeat volta 2
         \repeat percent 4
         <<
           {
             \myDrumVoiceRideEigthsSnareTwoAndFour
           } \\ {
-            bd8 bd r4 bd8 bd8 r4
+            bd8\f bd r4 bd8 bd8 r4
           }
         >>
+        \bar "S"
+        R1_"<- Repeat N"
       }
     >>
   >>

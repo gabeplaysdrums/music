@@ -9,6 +9,10 @@
   page-count = 1
 }
 
+\layout {
+  #(layout-set-staff-size 16)
+}
+
 % Commonly used voices
 
 myDrumVoiceHiHatEigthsSnareTwoAndFour = \drummode {
@@ -65,4 +69,10 @@ myDrumVoiceFillThreeCounts = \drummode {
 
 myDrumVoiceFillFourCounts = \drummode {
   \pushSlash sn4 sn sn sn \popSlash
+}
+
+% special shorthand
+
+myDrumVoicePreviousPatternMeasure = \drummode {
+   \pushSlash sn1 \popSlash 
 }

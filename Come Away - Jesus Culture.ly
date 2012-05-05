@@ -48,10 +48,6 @@ myBridgePatternVoice = \drummode {
   sn-> sn sn sn sn-> sn-> sn-> sn->
 }
 
-\layout {
-  #(layout-set-staff-size 16)
-}
-
 \score {
   <<
     \compressFullBarRests
@@ -60,7 +56,7 @@ myBridgePatternVoice = \drummode {
       \new DrumVoice = "2" { s1 }
       \drummode {
         \time 4/4
-        \tempo 4 = 120
+        \tempo 4 = 82
         
         \mark "Intro"
         R1*7_Guitar
