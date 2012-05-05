@@ -4,6 +4,10 @@
   title = \markup { "Come Away - Jesus Culture" }
 }
 
+\layout {
+  #(layout-set-staff-size 13)
+}
+
 myIntroPatternLastTwoBars = \drummode {
   \repeat unfold 2
   <<

@@ -2,11 +2,19 @@
 
 \include "english.ly"
 
+myCurrentDate = #(strftime "%B %d, %Y "(localtime (current-time)))
+
+\header {
+  tagline = \markup { "Transcribed by Gabriel Young" \myCurrentDate }
+}
+
 \paper {
   paper-height = 8.5\in
   paper-width = 11\in
   indent = #0
   page-count = 1
+  left-margin = 20\mm
+  right-margin = 20\mm
 }
 
 \layout {
