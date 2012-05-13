@@ -1,6 +1,7 @@
 \version "2.14.2"
 
 \include "english.ly"
+\include "common.ly"
 
 \header {
   title = \markup { "[Title] - [Artist]" }
